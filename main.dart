@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Allah Maha Benar'),
+        title: Text('halaman'),
       ),
       body: Stack(
         children: [
@@ -42,8 +42,9 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                FlutterLogo(size: 60,),
                 Text(
-                  'Flutter!!!!!!!!',
+                  'Flutter!',
                   style: TextStyle(
                     fontSize: 32, 
                     fontWeight: FontWeight.bold,
