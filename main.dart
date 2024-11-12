@@ -8,85 +8,53 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'myhomepage',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LoginScreen(), 
-    );
-  }
-}
-
-class LoginScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('halaman'),
-      ),
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    'https://www.blibli.com/friends-backend/wp-content/uploads/2024/03/B111533-1-Fakta-Unik-Bunga-Sakura-1024x538.jpg'),
-                fit: BoxFit.cover,
-              ),
+      title: 'Container Widget',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Container Widget'),
+        ),
+        body: Center(
+          child: Container(
+            width: 300,
+            height: 200,
+            padding: EdgeInsets.all(16),
+            margin: EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.purple[200],
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.red.withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: Offset(0, 3),
+                ),
+              ],
             ),
-          ),
-          // isi hlman
-          Padding(
-            padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                FlutterLogo(size: 60,),
                 Text(
-                  'Flutter!',
+                  'Title: Flutter Stuff',
                   style: TextStyle(
-                    fontSize: 32, 
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, 
                   ),
-                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 16),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'email',
-                    border: OutlineInputBorder(),
-                    filled: true,
-                    fillColor: Colors.white70, 
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                ),
-                SizedBox(height: 20),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'password',
-                    border: OutlineInputBorder(),
-                    filled: true,
-                    fillColor: Colors.white70, 
-                  ),
-                  
-                ),
-                SizedBox(height: 25),
                 Text(
-                  'forgot pw?',
-                  style: TextStyle(color: Colors.blueAccent),
+                  'Description: This is a card-like layout using a Container widget. It has padding, margin, and a box shadow.',
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 16),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('login'),
+                  child: Text('Visit to read more'),
                 ),
               ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }
